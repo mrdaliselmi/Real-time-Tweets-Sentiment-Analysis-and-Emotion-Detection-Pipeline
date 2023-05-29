@@ -272,7 +272,7 @@ def generate_email(emailing_list, search_phrases):
         text = msg.as_string()
         stmp.sendmail(from_address, to_address, text)
         stmp.quit()
-        return "Email Sent Successfully"
+        print("Email Sent Successfully")
 
 def main():
     vectorizer_path = 'tfidf.pkl'
@@ -283,7 +283,7 @@ def main():
     min_days_old = 1
     max_days_old = 2
     geocode = '39.8,-95.583068847656,2500km'
-    # load_data(search_phrases, time_limit, max_tweets, min_days_old, max_days_old, geocode)
+    load_data(search_phrases, time_limit, max_tweets, min_days_old, max_days_old, geocode)
     twt , predict_tfidf = preprocess(search_phrases, vectorizer_path)
     classifier = load_model(model_path)
     twt["emotion"]= predict(classifier,predict_tfidf, model_path)
