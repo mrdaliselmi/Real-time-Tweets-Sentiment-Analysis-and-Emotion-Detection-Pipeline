@@ -200,7 +200,7 @@ def predict_sentiments(twt):
     twt['sentiment_label']=twt.apply(lambda x: function(x),axis=1)
     return twt
 
-def generate_attachments(twt):
+def generate_attachments(twt, search_phrases=['chatgpt']):
     init_notebook_mode(connected=True)
     cf.set_config_file(offline=True, world_readable=True, theme='white')
 
@@ -218,7 +218,7 @@ def generate_attachments(twt):
                     textfont=dict(size=20),
                     marker=dict(colors=colors,
                                 line=dict(color='#000000', width=2)))
-    layout = ply.graph_objs.Layout(title="Sentiment Distribution")
+    layout = ply.graph_objs.Layout(title="Sentiment Distribution of Tweets on "+search_phrases[0])
     fig = ply.graph_objs.Figure(data=[trace], layout=layout)
     # fig.show()
     ply.offline.plot(fig, filename='sentiment_distribution.html')
@@ -234,7 +234,7 @@ def generate_attachments(twt):
     emotion_df["emotion"]=emotion_df['emotion'].apply(lambda x: mapper[x])
     emotion_Max=emotion_df.iloc[0,0]
     emotion_percent=str(round(sentiment_df.iloc[0,2],2))+"%"
-    fig=emotion_df.iplot(kind="pie",labels="emotion",values="count",pull=.2,hole=.2,colorscale='reds',textposition='outside',colors=['red','green','purple','orange'],title="Emotion Analysis of Tweets",world_readable=True,asFigure=True)
+    fig=emotion_df.iplot(kind="pie",labels="emotion",values="count",pull=.2,hole=.2,colorscale='reds',textposition='outside',colors=['red','green','purple','orange'],title="Emotion Analysis of Tweets on"+search_phrases[0] ,world_readable=True,asFigure=True)
     ply.offline.plot(fig,filename='emotion.html')
     
     sns.set(rc={'figure.figsize':(11.7,8.27)})
@@ -274,10 +274,9 @@ def generate_email(emailing_list, search_phrases):
         stmp.quit()
         print("Email Sent Successfully")
 
-def main():
+def main(search_phrases=['chatgpt']):
     vectorizer_path = 'tfidf.pkl'
     model_path = 'svm_model.pkl'
-    search_phrases = ['chatgpt']
     time_limit = 0.016666666666666666
     max_tweets = 50
     min_days_old = 1
