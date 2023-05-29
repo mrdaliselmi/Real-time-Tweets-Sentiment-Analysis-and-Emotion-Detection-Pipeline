@@ -1,0 +1,11 @@
+chart_studio==1.1.0
+cufflinks==0.17.3
+joblib==1.2.0
+nltk==3.8.1
+pandas==1.5.3
+plotly==5.11.0
+schedule==1.2.0
+scikit_learn==1.2.2
+seaborn==0.12.2
+textblob==0.17.1
+tweepy==4.14.0
