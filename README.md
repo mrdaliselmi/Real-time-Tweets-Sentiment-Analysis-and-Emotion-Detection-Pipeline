@@ -133,6 +133,6 @@ The model training and evaluation step includes the following steps:
 
 ## References
 
-- https://www.kaggle.com/praveengovi/emotions-dataset-for-nlp
+- https://www.kaggle.com/datasets/faisalsanto007/isear-dataset
 - Akshay Kulkarni, Adarsha Shivananda and Anoosh Kulkarni
 - A. Kulkarni et al., Natural Language Processing Projects, https://doi.org/10.1007/978-1-4842-7386-9_2

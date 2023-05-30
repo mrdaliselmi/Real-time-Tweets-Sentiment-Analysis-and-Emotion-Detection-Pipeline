@@ -287,7 +287,12 @@ def main(search_phrases=['chatgpt']):
     classifier = load_model(model_path)
     twt["emotion"]= predict(classifier,predict_tfidf, model_path)
     twt = predict_sentiments(twt)
+    print("=====================================================================================")
+    print("Generating attachments...")
     generate_attachments(twt)
+    print("Attachments generated successfully")
+    print("=====================================================================================")
+    print("Sending emails...")
     generate_email(emailing_list=["daliselmi30@gmail.com"], search_phrases=search_phrases)
 
 if __name__ == '__main__':
