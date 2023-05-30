@@ -43,7 +43,7 @@ To run the project, follow the steps below:
 1. clone the repository by using the following command:
 
     ```bash
-    git clone https://github.com/mrdaliselmi/ppp
+    git clone https://github.com/mrdaliselmi/Real-time-Tweets-Sentiment-Analysis-and-Emotion-Detection-Pipeline
     ```
 
 2. Install the required packages listed in [requirements.txt](requirements.txt) using the following command:
