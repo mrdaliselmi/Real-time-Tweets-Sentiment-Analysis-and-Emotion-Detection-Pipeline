@@ -5,7 +5,7 @@
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-This project is an end-to-end pipeline that provides powerful insights about any topic or product through real-time tweets sentiment analysis and emotion detection .
+This project is an end-to-end pipeline that provides powerful insights about any topic or product through real-time tweets sentiment analysis and emotion detection.
 
 This is a group project for the course **Professional Personal Project** at the **National Institute of Applied Science and Technology**, Tunisia.
 
